@@ -1,0 +1,12 @@
+		
+&ecspi2 {
+	status = "okay";
+	/delete-node/ spi@0;
+	oled:ssd1306oled@0 {
+		compatible = "solomon,ssd1306-spi";
+		reg = <0>;
+		spi-max-frequency = <2000000>;
+		dc-gpio =<&gpio6 21 GPIO_ACTIVE_HIGH>;//pin23  goui124 32x3=96+28
+		rst-gpio= <&gpio6 22 GPIO_ACTIVE_HIGH>;//pin22 gpio182 32x5=160+22
+	};
+};
