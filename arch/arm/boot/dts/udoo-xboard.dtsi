@@ -1,3 +1,10 @@
+&i2c2 {
+	ssd1306:ssd1306@3c{
+		compatible = "solomon,ssd1306-i2c";
+		reg = <0x3c>;
+	};
+};
+
 		
 &ecspi2 {
 	status = "okay";
